@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Contains user_company_import.module.
+ */
+ 
+/**
+ * Implements hook_theme().
+ */
+ 
+function user_company_import_theme($existing, $type, $theme, $path) {
+  return [
+    'user_company_list' => [
+      'variables' => [],
+      'template' => 'user-company-list',
+    ],
+  ];
+}

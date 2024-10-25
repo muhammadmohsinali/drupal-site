@@ -1,0 +1,26 @@
+id: company_migration
+label: 'Company Migration'
+migration_group: default
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - 'https://jsonplaceholder.typicode.com/users'
+  item_selector: '[0:]'
+  fields:
+    - name: company.name
+      label: 'Company Name'
+    - name: company.catchPhrase
+      label: 'Catch Phrase'
+    - name: company.bs
+      label: 'Business BS'
+destination:
+  plugin: entity:node
+  default_bundle: company
+process:
+  title: company.name
+  field_catch_phrase: company.catchPhrase
+  field_bs: company.bs
+  # Add a unique key to avoid creating duplicates
+  unique_key: company.name  # Optional but recommended if the Company already exists

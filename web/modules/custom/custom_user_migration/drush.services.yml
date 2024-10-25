@@ -1,0 +1,6 @@
+services:
+  custom_user_migration.commands:
+    class: Drupal\custom_user_migration\Commands\CustomUserMigrationCommands
+    arguments: ['@plugin.manager.migration', '@entity_type.manager']
+    tags:
+      - { name: drush.command }

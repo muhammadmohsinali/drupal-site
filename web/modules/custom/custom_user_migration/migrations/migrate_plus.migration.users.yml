@@ -1,0 +1,110 @@
+id: user_migration
+label: 'User Migration'
+migration_group: json_migrations
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - 'https://jsonplaceholder.typicode.com/users'
+  item_selector: ''
+  identifier: id
+  fields:
+    - name: id
+      label: 'User ID'
+      selector: id
+    - name: name
+      label: 'Full Name'
+      selector: name
+    - name: username
+      label: 'Username'
+      selector: username
+    - name: email
+      label: 'Email'
+      selector: email
+    - name: street
+      label: 'Street'
+      selector: address/street
+    - name: suite
+      label: 'Suite'
+      selector: address/suite
+    - name: city
+      label: 'City'
+      selector: address/city
+    - name: zipcode
+      label: 'Zipcode'
+      selector: address/zipcode
+    - name: latitude
+      label: 'Latitude'
+      selector: address/geo/lat
+    - name: longitude
+      label: 'Longitude'
+      selector: address/geo/lng
+    - name: phone
+      label: 'Phone'
+      selector: phone
+    - name: website
+      label: 'Website'
+      selector: website
+  ids:
+    id:
+      type: integer
+process:
+  name:
+    plugin: get
+    source: username
+  mail:
+    plugin: get
+    source: email
+  init:
+    plugin: get
+    source: email
+  pass:
+    plugin: default_value
+    default_value: "password"
+  status:
+    plugin: default_value
+    default_value: 1
+  roles:
+    plugin: default_value
+    default_value:
+      - authenticated
+  field_full_name:
+    plugin: get
+    source: name
+  field_phone:
+    plugin: get
+    source: phone
+  field_website:
+    plugin: get
+    source: website
+  field_street:
+    plugin: get
+    source: street
+  field_suite:
+    plugin: get
+    source: suite
+  field_city:
+    plugin: get
+    source: city
+  field_zipcode:
+    plugin: get
+    source: zipcode
+  field_latitude:
+    plugin: get
+    source: latitude
+  field_longitude:
+    plugin: get
+    source: longitude
+  field_company:
+    plugin: migration_lookup
+    migration: company_migration
+    source: id
+destination:
+  plugin: 'entity:user'
+migration_dependencies:
+  required:
+    - migrate_plus.migration.company_migration
+dependencies:
+  module:
+    - migrate_plus

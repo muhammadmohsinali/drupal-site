@@ -1,0 +1,7 @@
+name: 'User Company Import'
+type: module
+description: 'Imports users and companies from JSON data and displays them on a custom route.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:migrate_plus

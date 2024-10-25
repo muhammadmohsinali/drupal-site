@@ -1,0 +1,9 @@
+id: json_migrations
+label: JSON Migrations
+description: 'Migrations from JSON API'
+source_type: 'JSON API'
+shared_configuration:
+  source:
+    plugin: url
+    data_fetcher_plugin: http
+    data_parser_plugin: json
