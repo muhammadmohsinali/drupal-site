@@ -1,0 +1,7 @@
+user_company_import.user_company_list:
+  path: '/user-company-list'
+  defaults:
+    _controller: '\Drupal\user_company_import\Controller\UserCompanyImportController::userCompanyList'
+    _title: 'User and Company List'
+  requirements:
+    _permission: 'access content'
