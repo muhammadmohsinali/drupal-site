@@ -1,0 +1,90 @@
+id: user_migration
+label: 'User Migration'
+migration_tags:
+  - 'JSON Source'
+migration_group: json_migrations
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls:
+    - 'https://jsonplaceholder.typicode.com/users'
+  item_selector: '/'
+  fields:
+    - name: id
+      label: 'User ID'
+      selector: 'id'
+    - name: name
+      label: 'Full Name'
+      selector: 'name'
+    - name: username
+      label: 'Username'
+      selector: 'username'
+    - name: email
+      label: 'Email'
+      selector: 'email'
+    - name: street
+      label: 'Street'
+      selector: 'address/street'
+    - name: suite
+      label: 'Suite'
+      selector: 'address/suite'
+    - name: city
+      label: 'City'
+      selector: 'address/city'
+    - name: zipcode
+      label: 'Zipcode'
+      selector: 'address/zipcode'
+    - name: latitude
+      label: 'Latitude'
+      selector: 'address/geo/lat'
+    - name: longitude
+      label: 'Longitude'
+      selector: 'address/geo/lng'
+    - name: phone
+      label: 'Phone'
+      selector: 'phone'
+    - name: website
+      label: 'Website'
+      selector: 'website'
+    - name: company_name
+      label: 'Company Name'
+      selector: 'company/name'
+    - name: company_catch_phrase
+      label: 'Company Catch Phrase'
+      selector: 'company/catchPhrase'
+    - name: company_bs
+      label: 'Company BS'
+      selector: 'company/bs'
+  ids:
+    id:
+      type: integer
+process:
+  name: username
+  mail: email
+  status:
+    plugin: default_value
+    default_value: 1
+  field_full_name: name
+  field_phone: phone
+  field_website: website
+  field_street: street
+  field_suite: suite
+  field_city: city
+  field_zipcode: zipcode
+  field_latitude: latitude
+  field_longitude: longitude
+  field_full_address:
+    plugin: concat
+    source:
+      - street
+      - suite
+      - city
+      - zipcode
+    delimiter: ', '
+  field_company:
+    plugin: migration_lookup
+    migration: company_migration
+    source: id
+destination:
+  plugin: 'entity:user'

@@ -1,0 +1,9 @@
+name: Custom User Migration
+type: module
+description: 'Imports users and companies from JSON API'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools

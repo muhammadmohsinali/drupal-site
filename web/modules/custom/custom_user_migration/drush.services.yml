@@ -1,0 +1,6 @@
+services:
+  custom_user_migration.commands:
+    class: \Drupal\custom_user_migration\Commands\CustomUserMigrationCommands
+    arguments: ['@entity_type.manager', '@plugin.manager.migration']
+    tags:
+      - { name: drush.command }
