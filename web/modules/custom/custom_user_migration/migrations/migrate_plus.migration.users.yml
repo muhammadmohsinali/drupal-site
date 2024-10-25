@@ -47,24 +47,17 @@ source:
     - name: website
       label: 'Website'
       selector: 'website'
-    - name: company_name
-      label: 'Company Name'
-      selector: 'company/name'
-    - name: company_catch_phrase
-      label: 'Company Catch Phrase'
-      selector: 'company/catchPhrase'
-    - name: company_bs
-      label: 'Company BS'
-      selector: 'company/bs'
   ids:
     id:
       type: integer
+  constants:
+    user_status: 1
 process:
   name: username
   mail: email
   status:
     plugin: default_value
-    default_value: 1
+    default_value: '@constants/user_status'
   field_full_name: name
   field_phone: phone
   field_website: website
@@ -86,5 +79,21 @@ process:
     plugin: migration_lookup
     migration: company_migration
     source: id
+  created:
+    plugin: timestamp
+  changed:
+    plugin: timestamp
+  access:
+    plugin: timestamp
+  login:
+    plugin: timestamp
+  init: email
+  pass:
+    plugin: callback
+    callable: user_password
+    source: username
 destination:
   plugin: 'entity:user'
+migration_dependencies:
+  required:
+    - company_migration

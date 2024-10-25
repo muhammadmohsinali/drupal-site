@@ -26,16 +26,25 @@ source:
   ids:
     id:
       type: integer
+  constants:
+    node_type: company
 process:
   type:
     plugin: default_value
-    default_value: company
+    default_value: '@constants/node_type'
   title: company_name
   field_catch_phrase: catch_phrase
   field_bs: bs
   uid:
     plugin: default_value
     default_value: 1
+  status:
+    plugin: default_value
+    default_value: 1
+  created:
+    plugin: timestamp
+  changed:
+    plugin: timestamp
 destination:
   plugin: 'entity:node'
   default_bundle: company
