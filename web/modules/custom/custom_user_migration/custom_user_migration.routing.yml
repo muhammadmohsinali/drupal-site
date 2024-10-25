@@ -2,7 +2,7 @@ custom_user_migration.user_company_list:
   path: '/user-companies'
   defaults:
     _controller: '\Drupal\custom_user_migration\Controller\UserCompanyController::content'
-    _title: 'Users and Companies'
+    _title: 'Users and their Companies'
   requirements:
     _permission: 'access content'
 

@@ -25,8 +25,8 @@ class UserCompanyController extends ControllerBase {
             $company = $user->field_company->entity;
             $address_parts = [
                 $user->field_street->value,
-                $user->field_suite->value,
-                $user->field_city->value,
+//              $user->field_suite->value,
+//              $user->field_city->value,
                 $user->field_zipcode->value,
             ];
             $full_address = implode(', ', array_filter($address_parts));
@@ -37,7 +37,6 @@ class UserCompanyController extends ControllerBase {
                 'email' => $user->getEmail(),
                 'phone' => $user->field_phone->value,
                 'address' => $full_address,
-                'website' => $user->field_website->value,
                 'company' => $company ? $company->getTitle() : 'N/A',
                 'company_catch_phrase' => $company ? $company->field_catch_phrase->value : 'N/A',
             ];
@@ -52,8 +51,7 @@ class UserCompanyController extends ControllerBase {
                 'Email',
                 'Phone',
                 'Address',
-                'Website',
-                'Company',
+                'User Company',
                 'Company Catch Phrase',
             ],
             '#rows' => $rows,
