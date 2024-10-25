@@ -5,3 +5,11 @@ custom_user_migration.user_company_list:
     _title: 'Users and Companies'
   requirements:
     _permission: 'access content'
+
+custom_user_migration.test:
+  path: '/admin/config/development/migration-test'
+  defaults:
+    _controller: '\Drupal\custom_user_migration\Controller\MigrationTestController::testFetch'
+    _title: 'Migration Test'
+  requirements:
+    _permission: 'administer site configuration'

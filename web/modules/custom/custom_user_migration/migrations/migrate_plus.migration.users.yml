@@ -50,48 +50,54 @@ source:
   ids:
     id:
       type: integer
-  constants:
-    user_status: 1
 process:
-  name: username
-  mail: email
+  name:
+    plugin: get
+    source: username
+  mail:
+    plugin: get
+    source: email
+  init:
+    plugin: get
+    source: email
   status:
     plugin: default_value
-    default_value: '@constants/user_status'
-  field_full_name: name
-  field_phone: phone
-  field_website: website
-  field_street: street
-  field_suite: suite
-  field_city: city
-  field_zipcode: zipcode
-  field_latitude: latitude
-  field_longitude: longitude
-  field_full_address:
-    plugin: concat
-    source:
-      - street
-      - suite
-      - city
-      - zipcode
-    delimiter: ', '
+    default_value: 1
+  roles:
+    plugin: default_value
+    default_value:
+      - authenticated
+  field_full_name:
+    plugin: get
+    source: name
+  field_phone:
+    plugin: get
+    source: phone
+  field_website:
+    plugin: get
+    source: website
+  field_street:
+    plugin: get
+    source: street
+  field_suite:
+    plugin: get
+    source: suite
+  field_city:
+    plugin: get
+    source: city
+  field_zipcode:
+    plugin: get
+    source: zipcode
+  field_latitude:
+    plugin: get
+    source: latitude
+  field_longitude:
+    plugin: get
+    source: longitude
   field_company:
     plugin: migration_lookup
     migration: company_migration
     source: id
-  created:
-    plugin: timestamp
-  changed:
-    plugin: timestamp
-  access:
-    plugin: timestamp
-  login:
-    plugin: timestamp
-  init: email
-  pass:
-    plugin: callback
-    callable: user_password
-    source: username
 destination:
   plugin: 'entity:user'
 migration_dependencies:

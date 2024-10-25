@@ -9,42 +9,39 @@ source:
   data_parser_plugin: json
   urls:
     - 'https://jsonplaceholder.typicode.com/users'
-  item_selector: '/'
+  item_selector: ''  # Changed from '/' to empty string
+  identifier: id
   fields:
     - name: id
       label: 'User ID'
-      selector: 'id'
+      selector: id
     - name: company_name
       label: 'Company Name'
-      selector: 'company/name'
+      selector: company/name
     - name: catch_phrase
       label: 'Catch Phrase'
-      selector: 'company/catchPhrase'
+      selector: company/catchPhrase
     - name: bs
       label: 'Business Strategy'
-      selector: 'company/bs'
+      selector: company/bs
   ids:
     id:
       type: integer
-  constants:
-    node_type: company
 process:
   type:
     plugin: default_value
-    default_value: '@constants/node_type'
+    default_value: company
   title: company_name
-  field_catch_phrase: catch_phrase
-  field_bs: bs
-  uid:
-    plugin: default_value
-    default_value: 1
+  field_catch_phrase:
+    plugin: get
+    source: catch_phrase
+  field_bs:
+    plugin: get
+    source: bs
   status:
     plugin: default_value
     default_value: 1
-  created:
-    plugin: timestamp
-  changed:
-    plugin: timestamp
 destination:
   plugin: 'entity:node'
   default_bundle: company
+migration_dependencies: {}
