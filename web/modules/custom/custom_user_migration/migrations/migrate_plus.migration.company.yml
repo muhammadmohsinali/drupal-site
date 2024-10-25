@@ -1,7 +1,5 @@
 id: company_migration
 label: 'Company Migration'
-migration_tags:
-  - 'JSON Source'
 migration_group: json_migrations
 source:
   plugin: url
@@ -9,7 +7,7 @@ source:
   data_parser_plugin: json
   urls:
     - 'https://jsonplaceholder.typicode.com/users'
-  item_selector: ''  # Changed from '/' to empty string
+  item_selector: ''
   identifier: id
   fields:
     - name: id
@@ -44,4 +42,3 @@ process:
 destination:
   plugin: 'entity:node'
   default_bundle: company
-migration_dependencies: {}

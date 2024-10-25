@@ -1,7 +1,5 @@
 id: user_migration
 label: 'User Migration'
-migration_tags:
-  - 'JSON Source'
 migration_group: json_migrations
 source:
   plugin: url
@@ -9,44 +7,45 @@ source:
   data_parser_plugin: json
   urls:
     - 'https://jsonplaceholder.typicode.com/users'
-  item_selector: '/'
+  item_selector: ''
+  identifier: id
   fields:
     - name: id
       label: 'User ID'
-      selector: 'id'
+      selector: id
     - name: name
       label: 'Full Name'
-      selector: 'name'
+      selector: name
     - name: username
       label: 'Username'
-      selector: 'username'
+      selector: username
     - name: email
       label: 'Email'
-      selector: 'email'
+      selector: email
     - name: street
       label: 'Street'
-      selector: 'address/street'
+      selector: address/street
     - name: suite
       label: 'Suite'
-      selector: 'address/suite'
+      selector: address/suite
     - name: city
       label: 'City'
-      selector: 'address/city'
+      selector: address/city
     - name: zipcode
       label: 'Zipcode'
-      selector: 'address/zipcode'
+      selector: address/zipcode
     - name: latitude
       label: 'Latitude'
-      selector: 'address/geo/lat'
+      selector: address/geo/lat
     - name: longitude
       label: 'Longitude'
-      selector: 'address/geo/lng'
+      selector: address/geo/lng
     - name: phone
       label: 'Phone'
-      selector: 'phone'
+      selector: phone
     - name: website
       label: 'Website'
-      selector: 'website'
+      selector: website
   ids:
     id:
       type: integer
@@ -60,6 +59,9 @@ process:
   init:
     plugin: get
     source: email
+  pass:
+    plugin: default_value
+    default_value: "password"
   status:
     plugin: default_value
     default_value: 1
@@ -102,4 +104,7 @@ destination:
   plugin: 'entity:user'
 migration_dependencies:
   required:
-    - company_migration
+    - migrate_plus.migration.company_migration
+dependencies:
+  module:
+    - migrate_plus
