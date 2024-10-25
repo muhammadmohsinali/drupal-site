@@ -6,7 +6,7 @@
 #IMPORTANT NOTE
 
 1) You need to run composer install command in order to have Drupal core with all dependencies.
-2) The database is attached in the main repo, called database.zip.
+2) The database is attached in the main repo, called DrupalDatabase.zip.
 
 # Drupal JSON User Migration
 
