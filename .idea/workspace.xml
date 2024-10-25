@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f669b338-7f27-444b-9799-0f4263fb36e8" name="Default" comment="" />
+    <list default="true" id="f669b338-7f27-444b-9799-0f4263fb36e8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/modules/custom/custom_user_migration/migrations/migrate_plus.migration.users.yml" afterPath="" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,16 +17,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="migrate_example_advanced_setup.info.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/modules/contrib/migrate_plus/migrate_example_advanced/migrate_example_advanced_setup/migrate_example_advanced_setup.info.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="custom_user_migration.info.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/modules/custom/custom_user_migration/custom_user_migration.info.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -45,31 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drush.services.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/modules/custom/custom_user_migration/drush.services.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="migrate_plus.migration.users.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/modules/custom/custom_user_migration/migrations/migrate_plus.migration.users.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1666">
-              <caret line="98" column="23" lean-forward="false" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="migrate_plus.migration.company.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/modules/custom/custom_user_migration/migrations/migrate_plus.migration.company.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -115,6 +87,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="user_company_import.migrate_plus.migration.user.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/modules/custom/user_company_import/config/install/user_company_import.migrate_plus.migration.user.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="migrate_plus.migration.users_migration.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/modules/custom/custom_user_migration/migrations/migrate_plus.migration.users_migration.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_company_import.migrate_plus.migration.company.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/modules/custom/user_company_import/config/install/user_company_import.migrate_plus.migration.company.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -124,6 +126,7 @@
       <find>RESULT_COMPLET</find>
       <find>RESULT_COMPLE</find>
       <find>field_website</find>
+      <find>migration_group</find>
     </findStrings>
     <dirStrings>
       <dir>C:\laragon\www\drupal-site\web\modules\custom\custom_user_migration</dir>
@@ -336,6 +339,36 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal-site" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drupal-site" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom_user_migration" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -461,7 +494,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7057000" />
+    <option name="totallyTimeSpent" value="8197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="289" y="58" width="1918" height="1033" extended-state="0" />
@@ -508,30 +541,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/modules/contrib/migrate_plus/migrate_json_example/config/optional/field.field.node.product.field_upc.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/modules/contrib/migrate_plus/migrate_json_example/config/optional/field.storage.node.field_description.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/modules/contrib/migrate_plus/migrate_json_example/config/optional/field.field.node.product.field_description.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/modules/contrib/migrate_plus/migrate_json_example/config/optional/migrate_plus.migration.product.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-630">
@@ -892,7 +901,31 @@
     <entry file="file://$PROJECT_DIR$/web/modules/custom/custom_user_migration/migrations/migrate_plus.migration.company.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/modules/custom/user_company_import/config/install/user_company_import.migrate_plus.migration.company.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/modules/custom/user_company_import/config/install/user_company_import.migrate_plus.migration.user.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/modules/custom/custom_user_migration/migrations/migrate_plus.migration.users_migration.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="15" />
           <folding />
         </state>
       </provider>
