@@ -20,9 +20,10 @@ This module provides a migration solution for importing users and company data f
 
 ### Run Migration
 ```bash
-drush custom:migrate-users
-# or use the alias
-drush cmu
+
+drush migrate:import user_migration
+drush migrate:import company_migration
+
 ```
 
 ### Rollback Migration
