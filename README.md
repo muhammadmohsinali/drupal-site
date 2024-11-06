@@ -120,25 +120,6 @@ drush migrate:reset-status user_migration
 drush watchdog:show
 ```
 
-## Module Structure
-
-```
-custom_user_migration/
-├── config/
-│   └── install/
-│       ├── migrate_plus.migration_group.json_migrations.yml
-│       ├── migrate_plus.migration.company_migration.yml
-│       └── migrate_plus.migration.user_migration.yml
-├── src/
-│   ├── Controller/
-│   │   └── UserCompanyController.php
-│   └── Commands/
-│       └── CustomUserMigrationCommands.php
-├── custom_user_migration.info.yml
-├── custom_user_migration.routing.yml
-└── README.md
-```
-
 ## Contributing
 
 1. Fork the repository
